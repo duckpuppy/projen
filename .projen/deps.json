@@ -99,6 +99,10 @@
       "type": "build"
     },
     {
+      "name": "license-checker",
+      "type": "build"
+    },
+    {
       "name": "markmac",
       "type": "build"
     },

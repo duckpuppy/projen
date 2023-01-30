@@ -1,6 +1,7 @@
 import { join } from "path";
 import { Bundler, BundlerOptions } from "./bundler";
 import { Jest, JestOptions } from "./jest";
+import { LicenseChecker, LicenseCheckerOptions } from "./license-checker";
 import {
   CodeArtifactAuthProvider as NodePackageCodeArtifactAuthProvider,
   CodeArtifactOptions,
@@ -304,6 +305,18 @@ export interface NodeProjectOptions
    * @default "{ pullRequest: {}, workflowDispatch: {} }"
    */
   readonly buildWorkflowTriggers?: Triggers;
+
+  /**
+   * Enforce only allowed licenses in dependencies.
+   *
+   * @default false
+   */
+  readonly licenseChecker?: boolean;
+
+  /**
+   * Configure the license checker.
+   */
+  readonly licenseCheckerOptions?: LicenseCheckerOptions;
 }
 
 /**
@@ -732,6 +745,10 @@ export class NodeProject extends GitHubProject {
     if (options.prettier ?? false) {
       this.prettier = new Prettier(this, { ...options.prettierOptions });
     }
+
+    if (options.licenseChecker ?? false) {
+      new LicenseChecker(this, options.licenseCheckerOptions ?? {});
+    }
   }
 
   private renderUploadCoverageJobStep(options: NodeProjectOptions): JobStep[] {
@@ -1113,7 +1130,7 @@ export class NodeProject extends GitHubProject {
  */
 export interface RenderWorkflowSetupOptions {
   /**
-   * Should the pacakge lockfile be updated?
+   * Should the package lockfile be updated?
    * @default false
    */
   readonly mutable?: boolean;
