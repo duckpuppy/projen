@@ -107,6 +107,7 @@ Name|Description
 [javascript.Eslint](#projen-javascript-eslint)|Represents eslint configuration.
 [javascript.Jest](#projen-javascript-jest)|Installs the following npm scripts:.
 [javascript.JestReporter](#projen-javascript-jestreporter)|*No description*
+[javascript.LicenseChecker](#projen-javascript-licensechecker)|Enforces allowed licenses used by dependencies.
 [javascript.NodePackage](#projen-javascript-nodepackage)|Represents the npm `package.json` file.
 [javascript.NodeProject](#projen-javascript-nodeproject)|Node.js project.
 [javascript.NpmConfig](#projen-javascript-npmconfig)|File representing the local NPM config in .npmrc.
@@ -349,6 +350,7 @@ Name|Description
 [javascript.HasteConfig](#projen-javascript-hasteconfig)|*No description*
 [javascript.JestConfigOptions](#projen-javascript-jestconfigoptions)|*No description*
 [javascript.JestOptions](#projen-javascript-jestoptions)|*No description*
+[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)|Options to configure the license checker.
 [javascript.NodePackageOptions](#projen-javascript-nodepackageoptions)|*No description*
 [javascript.NodeProjectOptions](#projen-javascript-nodeprojectoptions)|*No description*
 [javascript.NpmConfigOptions](#projen-javascript-npmconfigoptions)|Options to configure the local NPM config.
@@ -3680,6 +3682,8 @@ new awscdk.AwsCdkConstructLibrary(options: AwsCdkConstructLibraryOptions)
   * **gitignore** (<code>Array<string></code>)  Additional entries to .gitignore. __*Optional*__
   * **jest** (<code>boolean</code>)  Setup jest unit tests. __*Default*__: true
   * **jestOptions** (<code>[javascript.JestOptions](#projen-javascript-jestoptions)</code>)  Jest options. __*Default*__: default options
+  * **licenseChecker** (<code>boolean</code>)  Enforce only allowed licenses in dependencies. __*Default*__: false
+  * **licenseCheckerOptions** (<code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code>)  Configure the license checker. __*Optional*__
   * **mutableBuild** (<code>boolean</code>)  Automatically update files modified during builds to pull-request branches. __*Default*__: true
   * **npmignore** (<code>Array<string></code>)  Additional entries to .npmignore. __*Optional*__
   * **npmignoreEnabled** (<code>boolean</code>)  Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs. __*Default*__: true
@@ -4377,6 +4381,8 @@ new awscdk.AwsCdkTypeScriptApp(options: AwsCdkTypeScriptAppOptions)
   * **gitignore** (<code>Array<string></code>)  Additional entries to .gitignore. __*Optional*__
   * **jest** (<code>boolean</code>)  Setup jest unit tests. __*Default*__: true
   * **jestOptions** (<code>[javascript.JestOptions](#projen-javascript-jestoptions)</code>)  Jest options. __*Default*__: default options
+  * **licenseChecker** (<code>boolean</code>)  Enforce only allowed licenses in dependencies. __*Default*__: false
+  * **licenseCheckerOptions** (<code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code>)  Configure the license checker. __*Optional*__
   * **mutableBuild** (<code>boolean</code>)  Automatically update files modified during builds to pull-request branches. __*Default*__: true
   * **npmignore** (<code>Array<string></code>)  Additional entries to .npmignore. __*Optional*__
   * **npmignoreEnabled** (<code>boolean</code>)  Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs. __*Default*__: true
@@ -4691,6 +4697,8 @@ new awscdk.ConstructLibraryAws(options: AwsCdkConstructLibraryOptions)
   * **gitignore** (<code>Array<string></code>)  Additional entries to .gitignore. __*Optional*__
   * **jest** (<code>boolean</code>)  Setup jest unit tests. __*Default*__: true
   * **jestOptions** (<code>[javascript.JestOptions](#projen-javascript-jestoptions)</code>)  Jest options. __*Default*__: default options
+  * **licenseChecker** (<code>boolean</code>)  Enforce only allowed licenses in dependencies. __*Default*__: false
+  * **licenseCheckerOptions** (<code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code>)  Configure the license checker. __*Optional*__
   * **mutableBuild** (<code>boolean</code>)  Automatically update files modified during builds to pull-request branches. __*Default*__: true
   * **npmignore** (<code>Array<string></code>)  Additional entries to .npmignore. __*Optional*__
   * **npmignoreEnabled** (<code>boolean</code>)  Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs. __*Default*__: true
@@ -5322,6 +5330,8 @@ new cdk.ConstructLibrary(options: ConstructLibraryOptions)
   * **gitignore** (<code>Array<string></code>)  Additional entries to .gitignore. __*Optional*__
   * **jest** (<code>boolean</code>)  Setup jest unit tests. __*Default*__: true
   * **jestOptions** (<code>[javascript.JestOptions](#projen-javascript-jestoptions)</code>)  Jest options. __*Default*__: default options
+  * **licenseChecker** (<code>boolean</code>)  Enforce only allowed licenses in dependencies. __*Default*__: false
+  * **licenseCheckerOptions** (<code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code>)  Configure the license checker. __*Optional*__
   * **mutableBuild** (<code>boolean</code>)  Automatically update files modified during builds to pull-request branches. __*Default*__: true
   * **npmignore** (<code>Array<string></code>)  Additional entries to .npmignore. __*Optional*__
   * **npmignoreEnabled** (<code>boolean</code>)  Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs. __*Default*__: true
@@ -5585,6 +5595,8 @@ new cdk.JsiiProject(options: JsiiProjectOptions)
   * **gitignore** (<code>Array<string></code>)  Additional entries to .gitignore. __*Optional*__
   * **jest** (<code>boolean</code>)  Setup jest unit tests. __*Default*__: true
   * **jestOptions** (<code>[javascript.JestOptions](#projen-javascript-jestoptions)</code>)  Jest options. __*Default*__: default options
+  * **licenseChecker** (<code>boolean</code>)  Enforce only allowed licenses in dependencies. __*Default*__: false
+  * **licenseCheckerOptions** (<code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code>)  Configure the license checker. __*Optional*__
   * **mutableBuild** (<code>boolean</code>)  Automatically update files modified during builds to pull-request branches. __*Default*__: true
   * **npmignore** (<code>Array<string></code>)  Additional entries to .npmignore. __*Optional*__
   * **npmignoreEnabled** (<code>boolean</code>)  Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs. __*Default*__: true
@@ -6005,6 +6017,8 @@ new cdk8s.Cdk8sTypeScriptApp(options: Cdk8sTypeScriptAppOptions)
   * **gitignore** (<code>Array<string></code>)  Additional entries to .gitignore. __*Optional*__
   * **jest** (<code>boolean</code>)  Setup jest unit tests. __*Default*__: true
   * **jestOptions** (<code>[javascript.JestOptions](#projen-javascript-jestoptions)</code>)  Jest options. __*Default*__: default options
+  * **licenseChecker** (<code>boolean</code>)  Enforce only allowed licenses in dependencies. __*Default*__: false
+  * **licenseCheckerOptions** (<code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code>)  Configure the license checker. __*Optional*__
   * **mutableBuild** (<code>boolean</code>)  Automatically update files modified during builds to pull-request branches. __*Default*__: true
   * **npmignore** (<code>Array<string></code>)  Additional entries to .npmignore. __*Optional*__
   * **npmignoreEnabled** (<code>boolean</code>)  Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs. __*Default*__: true
@@ -6191,6 +6205,8 @@ new cdk8s.ConstructLibraryCdk8s(options: ConstructLibraryCdk8sOptions)
   * **gitignore** (<code>Array<string></code>)  Additional entries to .gitignore. __*Optional*__
   * **jest** (<code>boolean</code>)  Setup jest unit tests. __*Default*__: true
   * **jestOptions** (<code>[javascript.JestOptions](#projen-javascript-jestoptions)</code>)  Jest options. __*Default*__: default options
+  * **licenseChecker** (<code>boolean</code>)  Enforce only allowed licenses in dependencies. __*Default*__: false
+  * **licenseCheckerOptions** (<code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code>)  Configure the license checker. __*Optional*__
   * **mutableBuild** (<code>boolean</code>)  Automatically update files modified during builds to pull-request branches. __*Default*__: true
   * **npmignore** (<code>Array<string></code>)  Additional entries to .npmignore. __*Optional*__
   * **npmignoreEnabled** (<code>boolean</code>)  Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs. __*Default*__: true
@@ -6437,6 +6453,8 @@ new cdktf.ConstructLibraryCdktf(options: ConstructLibraryCdktfOptions)
   * **gitignore** (<code>Array<string></code>)  Additional entries to .gitignore. __*Optional*__
   * **jest** (<code>boolean</code>)  Setup jest unit tests. __*Default*__: true
   * **jestOptions** (<code>[javascript.JestOptions](#projen-javascript-jestoptions)</code>)  Jest options. __*Default*__: default options
+  * **licenseChecker** (<code>boolean</code>)  Enforce only allowed licenses in dependencies. __*Default*__: false
+  * **licenseCheckerOptions** (<code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code>)  Configure the license checker. __*Optional*__
   * **mutableBuild** (<code>boolean</code>)  Automatically update files modified during builds to pull-request branches. __*Default*__: true
   * **npmignore** (<code>Array<string></code>)  Additional entries to .npmignore. __*Optional*__
   * **npmignoreEnabled** (<code>boolean</code>)  Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs. __*Default*__: true
@@ -8600,6 +8618,33 @@ new javascript.JestReporter(name: string, options?: Map<string, any>)
 
 
 
+## class LicenseChecker 🔹 <a id="projen-javascript-licensechecker"></a>
+
+Enforces allowed licenses used by dependencies.
+
+__Submodule__: javascript
+
+__Extends__: [Component](#projen-component)
+
+### Initializer
+
+
+
+
+```ts
+new javascript.LicenseChecker(project: NodeProject, options: LicenseCheckerOptions)
+```
+
+* **project** (<code>[javascript.NodeProject](#projen-javascript-nodeproject)</code>)  *No description*
+* **options** (<code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code>)  *No description*
+  * **allowedLicenses** (<code>Array<string></code>)  List of SPDX license identifiers that are allowed to be used. __*Default*__: no licenses are allowed
+  * **development** (<code>boolean</code>)  Check development dependencies. __*Default*__: false
+  * **production** (<code>boolean</code>)  Check production dependencies. __*Default*__: true
+  * **prohibitedLicenses** (<code>Array<string></code>)  List of SPDX license identifiers that are prohibited to be used. __*Default*__: no licenses are prohibited
+
+
+
+
 ## class NodePackage 🔹 <a id="projen-javascript-nodepackage"></a>
 
 Represents the npm `package.json` file.
@@ -9028,6 +9073,8 @@ new javascript.NodeProject(options: NodeProjectOptions)
   * **gitignore** (<code>Array<string></code>)  Additional entries to .gitignore. __*Optional*__
   * **jest** (<code>boolean</code>)  Setup jest unit tests. __*Default*__: true
   * **jestOptions** (<code>[javascript.JestOptions](#projen-javascript-jestoptions)</code>)  Jest options. __*Default*__: default options
+  * **licenseChecker** (<code>boolean</code>)  Enforce only allowed licenses in dependencies. __*Default*__: false
+  * **licenseCheckerOptions** (<code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code>)  Configure the license checker. __*Optional*__
   * **mutableBuild** (<code>boolean</code>)  Automatically update files modified during builds to pull-request branches. __*Default*__: true
   * **npmignore** (<code>Array<string></code>)  Additional entries to .npmignore. __*Optional*__
   * **npmignoreEnabled** (<code>boolean</code>)  Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs. __*Default*__: true
@@ -9269,7 +9316,7 @@ renderWorkflowSetup(options?: RenderWorkflowSetupOptions): Array<JobStep>
 ```
 
 * **options** (<code>[javascript.RenderWorkflowSetupOptions](#projen-javascript-renderworkflowsetupoptions)</code>)  Options.
-  * **mutable** (<code>boolean</code>)  Should the pacakge lockfile be updated? __*Default*__: false
+  * **mutable** (<code>boolean</code>)  Should the package lockfile be updated? __*Default*__: false
 
 __Returns__:
 * <code>Array<[github.workflows.JobStep](#projen-github-workflows-jobstep)></code>
@@ -11034,6 +11081,8 @@ new typescript.TypeScriptAppProject(options: TypeScriptProjectOptions)
   * **gitignore** (<code>Array<string></code>)  Additional entries to .gitignore. __*Optional*__
   * **jest** (<code>boolean</code>)  Setup jest unit tests. __*Default*__: true
   * **jestOptions** (<code>[javascript.JestOptions](#projen-javascript-jestoptions)</code>)  Jest options. __*Default*__: default options
+  * **licenseChecker** (<code>boolean</code>)  Enforce only allowed licenses in dependencies. __*Default*__: false
+  * **licenseCheckerOptions** (<code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code>)  Configure the license checker. __*Optional*__
   * **mutableBuild** (<code>boolean</code>)  Automatically update files modified during builds to pull-request branches. __*Default*__: true
   * **npmignore** (<code>Array<string></code>)  Additional entries to .npmignore. __*Optional*__
   * **npmignoreEnabled** (<code>boolean</code>)  Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs. __*Default*__: true
@@ -11193,6 +11242,8 @@ new typescript.TypeScriptLibraryProject(options: TypeScriptProjectOptions)
   * **gitignore** (<code>Array<string></code>)  Additional entries to .gitignore. __*Optional*__
   * **jest** (<code>boolean</code>)  Setup jest unit tests. __*Default*__: true
   * **jestOptions** (<code>[javascript.JestOptions](#projen-javascript-jestoptions)</code>)  Jest options. __*Default*__: default options
+  * **licenseChecker** (<code>boolean</code>)  Enforce only allowed licenses in dependencies. __*Default*__: false
+  * **licenseCheckerOptions** (<code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code>)  Configure the license checker. __*Optional*__
   * **mutableBuild** (<code>boolean</code>)  Automatically update files modified during builds to pull-request branches. __*Default*__: true
   * **npmignore** (<code>Array<string></code>)  Additional entries to .npmignore. __*Optional*__
   * **npmignoreEnabled** (<code>boolean</code>)  Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs. __*Default*__: true
@@ -11352,6 +11403,8 @@ new typescript.TypeScriptProject(options: TypeScriptProjectOptions)
   * **gitignore** (<code>Array<string></code>)  Additional entries to .gitignore. __*Optional*__
   * **jest** (<code>boolean</code>)  Setup jest unit tests. __*Default*__: true
   * **jestOptions** (<code>[javascript.JestOptions](#projen-javascript-jestoptions)</code>)  Jest options. __*Default*__: default options
+  * **licenseChecker** (<code>boolean</code>)  Enforce only allowed licenses in dependencies. __*Default*__: false
+  * **licenseCheckerOptions** (<code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code>)  Configure the license checker. __*Optional*__
   * **mutableBuild** (<code>boolean</code>)  Automatically update files modified during builds to pull-request branches. __*Default*__: true
   * **npmignore** (<code>Array<string></code>)  Additional entries to .npmignore. __*Optional*__
   * **npmignoreEnabled** (<code>boolean</code>)  Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs. __*Default*__: true
@@ -11888,6 +11941,8 @@ new web.NextJsProject(options: NextJsProjectOptions)
   * **gitignore** (<code>Array<string></code>)  Additional entries to .gitignore. __*Optional*__
   * **jest** (<code>boolean</code>)  Setup jest unit tests. __*Default*__: true
   * **jestOptions** (<code>[javascript.JestOptions](#projen-javascript-jestoptions)</code>)  Jest options. __*Default*__: default options
+  * **licenseChecker** (<code>boolean</code>)  Enforce only allowed licenses in dependencies. __*Default*__: false
+  * **licenseCheckerOptions** (<code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code>)  Configure the license checker. __*Optional*__
   * **mutableBuild** (<code>boolean</code>)  Automatically update files modified during builds to pull-request branches. __*Default*__: true
   * **npmignore** (<code>Array<string></code>)  Additional entries to .npmignore. __*Optional*__
   * **npmignoreEnabled** (<code>boolean</code>)  Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs. __*Default*__: true
@@ -12044,6 +12099,8 @@ new web.NextJsTypeScriptProject(options: NextJsTypeScriptProjectOptions)
   * **gitignore** (<code>Array<string></code>)  Additional entries to .gitignore. __*Optional*__
   * **jest** (<code>boolean</code>)  Setup jest unit tests. __*Default*__: true
   * **jestOptions** (<code>[javascript.JestOptions](#projen-javascript-jestoptions)</code>)  Jest options. __*Default*__: default options
+  * **licenseChecker** (<code>boolean</code>)  Enforce only allowed licenses in dependencies. __*Default*__: false
+  * **licenseCheckerOptions** (<code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code>)  Configure the license checker. __*Optional*__
   * **mutableBuild** (<code>boolean</code>)  Automatically update files modified during builds to pull-request branches. __*Default*__: true
   * **npmignore** (<code>Array<string></code>)  Additional entries to .npmignore. __*Optional*__
   * **npmignoreEnabled** (<code>boolean</code>)  Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs. __*Default*__: true
@@ -12273,6 +12330,8 @@ new web.ReactProject(options: ReactProjectOptions)
   * **gitignore** (<code>Array<string></code>)  Additional entries to .gitignore. __*Optional*__
   * **jest** (<code>boolean</code>)  Setup jest unit tests. __*Default*__: true
   * **jestOptions** (<code>[javascript.JestOptions](#projen-javascript-jestoptions)</code>)  Jest options. __*Default*__: default options
+  * **licenseChecker** (<code>boolean</code>)  Enforce only allowed licenses in dependencies. __*Default*__: false
+  * **licenseCheckerOptions** (<code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code>)  Configure the license checker. __*Optional*__
   * **mutableBuild** (<code>boolean</code>)  Automatically update files modified during builds to pull-request branches. __*Default*__: true
   * **npmignore** (<code>Array<string></code>)  Additional entries to .npmignore. __*Optional*__
   * **npmignoreEnabled** (<code>boolean</code>)  Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs. __*Default*__: true
@@ -12471,6 +12530,8 @@ new web.ReactTypeScriptProject(options: ReactTypeScriptProjectOptions)
   * **gitignore** (<code>Array<string></code>)  Additional entries to .gitignore. __*Optional*__
   * **jest** (<code>boolean</code>)  Setup jest unit tests. __*Default*__: true
   * **jestOptions** (<code>[javascript.JestOptions](#projen-javascript-jestoptions)</code>)  Jest options. __*Default*__: default options
+  * **licenseChecker** (<code>boolean</code>)  Enforce only allowed licenses in dependencies. __*Default*__: false
+  * **licenseCheckerOptions** (<code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code>)  Configure the license checker. __*Optional*__
   * **mutableBuild** (<code>boolean</code>)  Automatically update files modified during builds to pull-request branches. __*Default*__: true
   * **npmignore** (<code>Array<string></code>)  Additional entries to .npmignore. __*Optional*__
   * **npmignoreEnabled** (<code>boolean</code>)  Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs. __*Default*__: true
@@ -13772,6 +13833,8 @@ Name | Type | Description
 **lambdaOptions**?🔹 | <code>[awscdk.LambdaFunctionCommonOptions](#projen-awscdk-lambdafunctioncommonoptions)</code> | Common options for all AWS Lambda functions.<br/>__*Default*__: default options
 **libdir**?🔹 | <code>string</code> | Typescript  artifacts output directory.<br/>__*Default*__: "lib"
 **license**?🔹 | <code>string</code> | License's SPDX identifier.<br/>__*Default*__: "Apache-2.0"
+**licenseChecker**?🔹 | <code>boolean</code> | Enforce only allowed licenses in dependencies.<br/>__*Default*__: false
+**licenseCheckerOptions**?🔹 | <code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code> | Configure the license checker.<br/>__*Optional*__
 **licensed**?🔹 | <code>boolean</code> | Indicates if a license should be added.<br/>__*Default*__: true
 **logging**?🔹 | <code>[LoggerOptions](#projen-loggeroptions)</code> | Configure logging options such as verbosity.<br/>__*Default*__: {}
 **majorVersion**?🔹 | <code>number</code> | Major version to release from the default branch.<br/>__*Default*__: Major version is not enforced.
@@ -14163,6 +14226,8 @@ Name | Type | Description
 **lambdaOptions**?🔹 | <code>[awscdk.LambdaFunctionCommonOptions](#projen-awscdk-lambdafunctioncommonoptions)</code> | Common options for all AWS Lambda functions.<br/>__*Default*__: default options
 **libdir**?🔹 | <code>string</code> | Typescript  artifacts output directory.<br/>__*Default*__: "lib"
 **license**?🔹 | <code>string</code> | License's SPDX identifier.<br/>__*Default*__: "Apache-2.0"
+**licenseChecker**?🔹 | <code>boolean</code> | Enforce only allowed licenses in dependencies.<br/>__*Default*__: false
+**licenseCheckerOptions**?🔹 | <code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code> | Configure the license checker.<br/>__*Optional*__
 **licensed**?🔹 | <code>boolean</code> | Indicates if a license should be added.<br/>__*Default*__: true
 **logging**?🔹 | <code>[LoggerOptions](#projen-loggeroptions)</code> | Configure logging options such as verbosity.<br/>__*Default*__: {}
 **majorVersion**?🔹 | <code>number</code> | Major version to release from the default branch.<br/>__*Default*__: Major version is not enforced.
@@ -14378,6 +14443,8 @@ Name | Type | Description
 **lambdaOptions**?⚠️ | <code>[awscdk.LambdaFunctionCommonOptions](#projen-awscdk-lambdafunctioncommonoptions)</code> | Common options for all AWS Lambda functions.<br/>__*Default*__: default options
 **libdir**?⚠️ | <code>string</code> | Typescript  artifacts output directory.<br/>__*Default*__: "lib"
 **license**?⚠️ | <code>string</code> | License's SPDX identifier.<br/>__*Default*__: "Apache-2.0"
+**licenseChecker**?⚠️ | <code>boolean</code> | Enforce only allowed licenses in dependencies.<br/>__*Default*__: false
+**licenseCheckerOptions**?⚠️ | <code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code> | Configure the license checker.<br/>__*Optional*__
 **licensed**?⚠️ | <code>boolean</code> | Indicates if a license should be added.<br/>__*Default*__: true
 **logging**?⚠️ | <code>[LoggerOptions](#projen-loggeroptions)</code> | Configure logging options such as verbosity.<br/>__*Default*__: {}
 **majorVersion**?⚠️ | <code>number</code> | Major version to release from the default branch.<br/>__*Default*__: Major version is not enforced.
@@ -14807,6 +14874,8 @@ Name | Type | Description
 **keywords**?🔹 | <code>Array<string></code> | Keywords to include in `package.json`.<br/>__*Optional*__
 **libdir**?🔹 | <code>string</code> | Typescript  artifacts output directory.<br/>__*Default*__: "lib"
 **license**?🔹 | <code>string</code> | License's SPDX identifier.<br/>__*Default*__: "Apache-2.0"
+**licenseChecker**?🔹 | <code>boolean</code> | Enforce only allowed licenses in dependencies.<br/>__*Default*__: false
+**licenseCheckerOptions**?🔹 | <code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code> | Configure the license checker.<br/>__*Optional*__
 **licensed**?🔹 | <code>boolean</code> | Indicates if a license should be added.<br/>__*Default*__: true
 **logging**?🔹 | <code>[LoggerOptions](#projen-loggeroptions)</code> | Configure logging options such as verbosity.<br/>__*Default*__: {}
 **majorVersion**?🔹 | <code>number</code> | Major version to release from the default branch.<br/>__*Default*__: Major version is not enforced.
@@ -15081,6 +15150,8 @@ Name | Type | Description
 **keywords**?🔹 | <code>Array<string></code> | Keywords to include in `package.json`.<br/>__*Optional*__
 **libdir**?🔹 | <code>string</code> | Typescript  artifacts output directory.<br/>__*Default*__: "lib"
 **license**?🔹 | <code>string</code> | License's SPDX identifier.<br/>__*Default*__: "Apache-2.0"
+**licenseChecker**?🔹 | <code>boolean</code> | Enforce only allowed licenses in dependencies.<br/>__*Default*__: false
+**licenseCheckerOptions**?🔹 | <code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code> | Configure the license checker.<br/>__*Optional*__
 **licensed**?🔹 | <code>boolean</code> | Indicates if a license should be added.<br/>__*Default*__: true
 **logging**?🔹 | <code>[LoggerOptions](#projen-loggeroptions)</code> | Configure logging options such as verbosity.<br/>__*Default*__: {}
 **majorVersion**?🔹 | <code>number</code> | Major version to release from the default branch.<br/>__*Default*__: Major version is not enforced.
@@ -15428,6 +15499,8 @@ Name | Type | Description
 **keywords**?🔹 | <code>Array<string></code> | Keywords to include in `package.json`.<br/>__*Optional*__
 **libdir**?🔹 | <code>string</code> | Typescript  artifacts output directory.<br/>__*Default*__: "lib"
 **license**?🔹 | <code>string</code> | License's SPDX identifier.<br/>__*Default*__: "Apache-2.0"
+**licenseChecker**?🔹 | <code>boolean</code> | Enforce only allowed licenses in dependencies.<br/>__*Default*__: false
+**licenseCheckerOptions**?🔹 | <code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code> | Configure the license checker.<br/>__*Optional*__
 **licensed**?🔹 | <code>boolean</code> | Indicates if a license should be added.<br/>__*Default*__: true
 **logging**?🔹 | <code>[LoggerOptions](#projen-loggeroptions)</code> | Configure logging options such as verbosity.<br/>__*Default*__: {}
 **majorVersion**?🔹 | <code>number</code> | Major version to release from the default branch.<br/>__*Default*__: Major version is not enforced.
@@ -15594,6 +15667,8 @@ Name | Type | Description
 **keywords**?🔹 | <code>Array<string></code> | Keywords to include in `package.json`.<br/>__*Optional*__
 **libdir**?🔹 | <code>string</code> | Typescript  artifacts output directory.<br/>__*Default*__: "lib"
 **license**?🔹 | <code>string</code> | License's SPDX identifier.<br/>__*Default*__: "Apache-2.0"
+**licenseChecker**?🔹 | <code>boolean</code> | Enforce only allowed licenses in dependencies.<br/>__*Default*__: false
+**licenseCheckerOptions**?🔹 | <code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code> | Configure the license checker.<br/>__*Optional*__
 **licensed**?🔹 | <code>boolean</code> | Indicates if a license should be added.<br/>__*Default*__: true
 **logging**?🔹 | <code>[LoggerOptions](#projen-loggeroptions)</code> | Configure logging options such as verbosity.<br/>__*Default*__: {}
 **majorVersion**?🔹 | <code>number</code> | Major version to release from the default branch.<br/>__*Default*__: Major version is not enforced.
@@ -15791,6 +15866,8 @@ Name | Type | Description
 **keywords**?🔹 | <code>Array<string></code> | Keywords to include in `package.json`.<br/>__*Optional*__
 **libdir**?🔹 | <code>string</code> | Typescript  artifacts output directory.<br/>__*Default*__: "lib"
 **license**?🔹 | <code>string</code> | License's SPDX identifier.<br/>__*Default*__: "Apache-2.0"
+**licenseChecker**?🔹 | <code>boolean</code> | Enforce only allowed licenses in dependencies.<br/>__*Default*__: false
+**licenseCheckerOptions**?🔹 | <code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code> | Configure the license checker.<br/>__*Optional*__
 **licensed**?🔹 | <code>boolean</code> | Indicates if a license should be added.<br/>__*Default*__: true
 **logging**?🔹 | <code>[LoggerOptions](#projen-loggeroptions)</code> | Configure logging options such as verbosity.<br/>__*Default*__: {}
 **majorVersion**?🔹 | <code>number</code> | Major version to release from the default branch.<br/>__*Default*__: Major version is not enforced.
@@ -17695,6 +17772,22 @@ Name | Type | Description
 
 
 
+## struct LicenseCheckerOptions 🔹 <a id="projen-javascript-licensecheckeroptions"></a>
+
+
+Options to configure the license checker.
+
+
+
+Name | Type | Description 
+-----|------|-------------
+**allowedLicenses**?🔹 | <code>Array<string></code> | List of SPDX license identifiers that are allowed to be used.<br/>__*Default*__: no licenses are allowed
+**development**?🔹 | <code>boolean</code> | Check development dependencies.<br/>__*Default*__: false
+**production**?🔹 | <code>boolean</code> | Check production dependencies.<br/>__*Default*__: true
+**prohibitedLicenses**?🔹 | <code>Array<string></code> | List of SPDX license identifiers that are prohibited to be used.<br/>__*Default*__: no licenses are prohibited
+
+
+
 ## struct NodePackageOptions 🔹 <a id="projen-javascript-nodepackageoptions"></a>
 
 
@@ -17799,6 +17892,8 @@ Name | Type | Description
 **jsiiReleaseVersion**?🔹 | <code>string</code> | Version requirement of `publib` which is used to publish modules to npm.<br/>__*Default*__: "latest"
 **keywords**?🔹 | <code>Array<string></code> | Keywords to include in `package.json`.<br/>__*Optional*__
 **license**?🔹 | <code>string</code> | License's SPDX identifier.<br/>__*Default*__: "Apache-2.0"
+**licenseChecker**?🔹 | <code>boolean</code> | Enforce only allowed licenses in dependencies.<br/>__*Default*__: false
+**licenseCheckerOptions**?🔹 | <code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code> | Configure the license checker.<br/>__*Optional*__
 **licensed**?🔹 | <code>boolean</code> | Indicates if a license should be added.<br/>__*Default*__: true
 **logging**?🔹 | <code>[LoggerOptions](#projen-loggeroptions)</code> | Configure logging options such as verbosity.<br/>__*Default*__: {}
 **majorVersion**?🔹 | <code>number</code> | Major version to release from the default branch.<br/>__*Default*__: Major version is not enforced.
@@ -17991,7 +18086,7 @@ Options for `renderInstallSteps()`.
 
 Name | Type | Description 
 -----|------|-------------
-**mutable**?🔹 | <code>boolean</code> | Should the pacakge lockfile be updated?<br/>__*Default*__: false
+**mutable**?🔹 | <code>boolean</code> | Should the package lockfile be updated?<br/>__*Default*__: false
 
 
 
@@ -18983,6 +19078,8 @@ Name | Type | Description
 **keywords**?⚠️ | <code>Array<string></code> | Keywords to include in `package.json`.<br/>__*Optional*__
 **libdir**?⚠️ | <code>string</code> | Typescript  artifacts output directory.<br/>__*Default*__: "lib"
 **license**?⚠️ | <code>string</code> | License's SPDX identifier.<br/>__*Default*__: "Apache-2.0"
+**licenseChecker**?⚠️ | <code>boolean</code> | Enforce only allowed licenses in dependencies.<br/>__*Default*__: false
+**licenseCheckerOptions**?⚠️ | <code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code> | Configure the license checker.<br/>__*Optional*__
 **licensed**?⚠️ | <code>boolean</code> | Indicates if a license should be added.<br/>__*Default*__: true
 **logging**?⚠️ | <code>[LoggerOptions](#projen-loggeroptions)</code> | Configure logging options such as verbosity.<br/>__*Default*__: {}
 **majorVersion**?⚠️ | <code>number</code> | Major version to release from the default branch.<br/>__*Default*__: Major version is not enforced.
@@ -19132,6 +19229,8 @@ Name | Type | Description
 **keywords**?🔹 | <code>Array<string></code> | Keywords to include in `package.json`.<br/>__*Optional*__
 **libdir**?🔹 | <code>string</code> | Typescript  artifacts output directory.<br/>__*Default*__: "lib"
 **license**?🔹 | <code>string</code> | License's SPDX identifier.<br/>__*Default*__: "Apache-2.0"
+**licenseChecker**?🔹 | <code>boolean</code> | Enforce only allowed licenses in dependencies.<br/>__*Default*__: false
+**licenseCheckerOptions**?🔹 | <code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code> | Configure the license checker.<br/>__*Optional*__
 **licensed**?🔹 | <code>boolean</code> | Indicates if a license should be added.<br/>__*Default*__: true
 **logging**?🔹 | <code>[LoggerOptions](#projen-loggeroptions)</code> | Configure logging options such as verbosity.<br/>__*Default*__: {}
 **majorVersion**?🔹 | <code>number</code> | Major version to release from the default branch.<br/>__*Default*__: Major version is not enforced.
@@ -19477,6 +19576,8 @@ Name | Type | Description
 **jsiiReleaseVersion**?🔹 | <code>string</code> | Version requirement of `publib` which is used to publish modules to npm.<br/>__*Default*__: "latest"
 **keywords**?🔹 | <code>Array<string></code> | Keywords to include in `package.json`.<br/>__*Optional*__
 **license**?🔹 | <code>string</code> | License's SPDX identifier.<br/>__*Default*__: "Apache-2.0"
+**licenseChecker**?🔹 | <code>boolean</code> | Enforce only allowed licenses in dependencies.<br/>__*Default*__: false
+**licenseCheckerOptions**?🔹 | <code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code> | Configure the license checker.<br/>__*Optional*__
 **licensed**?🔹 | <code>boolean</code> | Indicates if a license should be added.<br/>__*Default*__: true
 **logging**?🔹 | <code>[LoggerOptions](#projen-loggeroptions)</code> | Configure logging options such as verbosity.<br/>__*Default*__: {}
 **majorVersion**?🔹 | <code>number</code> | Major version to release from the default branch.<br/>__*Default*__: Major version is not enforced.
@@ -19621,6 +19722,8 @@ Name | Type | Description
 **keywords**?🔹 | <code>Array<string></code> | Keywords to include in `package.json`.<br/>__*Optional*__
 **libdir**?🔹 | <code>string</code> | Typescript  artifacts output directory.<br/>__*Default*__: "lib"
 **license**?🔹 | <code>string</code> | License's SPDX identifier.<br/>__*Default*__: "Apache-2.0"
+**licenseChecker**?🔹 | <code>boolean</code> | Enforce only allowed licenses in dependencies.<br/>__*Default*__: false
+**licenseCheckerOptions**?🔹 | <code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code> | Configure the license checker.<br/>__*Optional*__
 **licensed**?🔹 | <code>boolean</code> | Indicates if a license should be added.<br/>__*Default*__: true
 **logging**?🔹 | <code>[LoggerOptions](#projen-loggeroptions)</code> | Configure logging options such as verbosity.<br/>__*Default*__: {}
 **majorVersion**?🔹 | <code>number</code> | Major version to release from the default branch.<br/>__*Default*__: Major version is not enforced.
@@ -19792,6 +19895,8 @@ Name | Type | Description
 **jsiiReleaseVersion**?🔹 | <code>string</code> | Version requirement of `publib` which is used to publish modules to npm.<br/>__*Default*__: "latest"
 **keywords**?🔹 | <code>Array<string></code> | Keywords to include in `package.json`.<br/>__*Optional*__
 **license**?🔹 | <code>string</code> | License's SPDX identifier.<br/>__*Default*__: "Apache-2.0"
+**licenseChecker**?🔹 | <code>boolean</code> | Enforce only allowed licenses in dependencies.<br/>__*Default*__: false
+**licenseCheckerOptions**?🔹 | <code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code> | Configure the license checker.<br/>__*Optional*__
 **licensed**?🔹 | <code>boolean</code> | Indicates if a license should be added.<br/>__*Default*__: true
 **logging**?🔹 | <code>[LoggerOptions](#projen-loggeroptions)</code> | Configure logging options such as verbosity.<br/>__*Default*__: {}
 **majorVersion**?🔹 | <code>number</code> | Major version to release from the default branch.<br/>__*Default*__: Major version is not enforced.
@@ -19965,6 +20070,8 @@ Name | Type | Description
 **keywords**?🔹 | <code>Array<string></code> | Keywords to include in `package.json`.<br/>__*Optional*__
 **libdir**?🔹 | <code>string</code> | Typescript  artifacts output directory.<br/>__*Default*__: "lib"
 **license**?🔹 | <code>string</code> | License's SPDX identifier.<br/>__*Default*__: "Apache-2.0"
+**licenseChecker**?🔹 | <code>boolean</code> | Enforce only allowed licenses in dependencies.<br/>__*Default*__: false
+**licenseCheckerOptions**?🔹 | <code>[javascript.LicenseCheckerOptions](#projen-javascript-licensecheckeroptions)</code> | Configure the license checker.<br/>__*Optional*__
 **licensed**?🔹 | <code>boolean</code> | Indicates if a license should be added.<br/>__*Default*__: true
 **logging**?🔹 | <code>[LoggerOptions](#projen-loggeroptions)</code> | Configure logging options such as verbosity.<br/>__*Default*__: {}
 **majorVersion**?🔹 | <code>number</code> | Major version to release from the default branch.<br/>__*Default*__: Major version is not enforced.
